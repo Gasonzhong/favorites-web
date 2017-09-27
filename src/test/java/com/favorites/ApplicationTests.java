@@ -48,6 +48,7 @@ public class ApplicationTests {
 
 	@Test
 	public void testJmx() throws Exception {
+		//测试连接
 		assertThat(ManagementFactory.getPlatformMBeanServer()
 				.queryMBeans(new ObjectName("jpa.sample:type=ConnectionPool,*"), null))
 						.hasSize(1);
